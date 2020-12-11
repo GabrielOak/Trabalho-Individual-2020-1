@@ -1,7 +1,7 @@
 <template>
 
   <v-list two-line>
-    <v-subheader v-if="query !== ''">Search results for: "{{ query }}"</v-subheader>
+    <v-subheader v-if="query !== ''">Results for: "{{ query }}"</v-subheader>
 
     <v-list-item
       v-for="profile in results"

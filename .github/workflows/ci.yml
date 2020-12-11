@@ -9,12 +9,12 @@ on:
 jobs:
   api:
     runs-on: ubuntu-latest
+    env:
+        DATABASE_PASSWORD: postgres
+        DATABASE_USERNAME: postgres
+        DATABASE_HOST: db
+        POSTGRES_PASSWORD: postgres
     steps:
-      env:
-          DATABASE_PASSWORD: postgres
-          DATABASE_USERNAME: postgres
-          DATABASE_HOST: db
-          POSTGRES_PASSWORD: postgres
           
       - uses: actions/checkout@v2
 

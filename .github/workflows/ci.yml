@@ -10,14 +10,15 @@ jobs:
   api:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: build api containers
-        env:
+      env:
           DATABASE_PASSWORD: postgres
           DATABASE_USERNAME: postgres
           DATABASE_HOST: db
           POSTGRES_PASSWORD: postgres
+          
+      - uses: actions/checkout@v2
+
+      - name: build api containers
         run:  docker-compose up --no-start api
 
       - name: create database

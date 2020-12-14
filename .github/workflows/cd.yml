@@ -15,7 +15,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          script: cd Trabalho-Individual-2020-1 \
-                  git pull \
-                  docker-compose up -d --build
+          script: cd Trabalho-Individual-2020-1 && git pull && docker-compose up -d --build
                   

@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 
-WORKDIR /app
+WORKDIR /usr/app
 
-COPY package*.json /app
+COPY package*.json ./
 
 RUN yarn install
 

@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const base = 'http://157.245.84.59:3000/api/v1'
+require('dotenv').config()
+
+const base = `http://${process.env.VUE_APP_API_HOST}/api/v1`
 
 const API = axios.create({
   baseURL: base

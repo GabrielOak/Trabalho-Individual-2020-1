@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   db:
-    image: postgres
+    image: postgres:12
     environment: 
       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
     volumes:
@@ -25,6 +25,8 @@ services:
 
   client:
     build: ./client
+    environment: 
+      - VUE_APP_API_HOST=${VUE_APP_API_HOST}
     ports:
       - 8080:8080
     volumes: 

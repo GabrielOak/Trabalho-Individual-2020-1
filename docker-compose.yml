@@ -28,7 +28,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - .:/app/
+      - ./client:/app
     command: ['yarn', 'serve']
     depends_on:
       - api

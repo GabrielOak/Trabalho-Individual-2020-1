@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
 
-jobs:
+jobs: 
   api:
     runs-on: ubuntu-latest
     env:
@@ -31,6 +31,11 @@ jobs:
         run : docker-compose run api bundle exec rails test
         
   client:
+    env:
+        DATABASE_PASSWORD: postgres
+        DATABASE_USERNAME: postgres
+        DATABASE_HOST: db
+        POSTGRES_PASSWORD: postgres
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
